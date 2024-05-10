@@ -1,0 +1,16 @@
+const int photoResistor = 0; //connected to analog pin A0
+int lightLevel;
+
+void setup() {
+
+  Serial.begin(9600);
+
+}
+
+void loop() {
+  
+  lightLevel = analogRead(photoResistor);
+  Serial.println(lightLevel); //this is the value sent off to Unreal Engine
+
+  delay(100);
+}
